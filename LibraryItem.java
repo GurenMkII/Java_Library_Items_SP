@@ -1,21 +1,25 @@
 package lab;
 
 public class LibraryItem {
-    private int id;
+    private int id, numOfPages;
     private String loc, title;
     private boolean isLoanable, isAvailable;
 
 
-    public LibraryItem(int id, String loc, String title, boolean isAvailable, boolean isLoanable){
+    public LibraryItem(int id, String loc, String title, boolean isAvailable, boolean isLoanable, int numOfPages){
         this.id = id;
         this.loc = loc;
         this.title = title;
         this.isAvailable = isAvailable;
         this.isLoanable = isLoanable;
+        this.numOfPages = numOfPages;
     }
 
     public void setId(int id){
         this.id = id;
+    }
+    public void setNumOfPages(int numOfPages){
+        this.numOfPages = numOfPages;
     }
     public void setLoc(String loc){
         this.loc = loc;
@@ -32,6 +36,9 @@ public class LibraryItem {
 
     public int getId(){
         return id;
+    }
+    public int getNumOfPages(){
+        return numOfPages;
     }
     public String getLoc(){
         return loc;
