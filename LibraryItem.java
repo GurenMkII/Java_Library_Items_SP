@@ -53,6 +53,10 @@ public class LibraryItem {
         return isAvailable;
     }
 
+    @Override
+    public String toString(){
+        return this.getTitle()+" - Located at: "+this.getLoc();
+    }
 
     
 }
