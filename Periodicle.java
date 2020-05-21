@@ -1,5 +1,3 @@
-package lab;
-
 public class Periodicle extends LibraryItem {
     private int issueNum;
 

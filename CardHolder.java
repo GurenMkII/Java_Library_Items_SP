@@ -1,5 +1,3 @@
-package lab;
-
 public class CardHolder {
     private String firstName, lastName, cardId;
 
@@ -30,8 +28,8 @@ public class CardHolder {
     }
 
 
-    public String previewItem(String cardId, String title){
-        System.out.println(this.getFirstName()+" checking out - "+LibraryItem.getTitle()); //??? stuck here...
+    public void previewItem(CardHolder person, LibraryItem book){
+        System.out.println(this.getFirstName()+" checking out - "+book.getTitle()); //??? stuck here...
     }
 
     

@@ -1,5 +1,3 @@
-package lab;
-
 public class ReferenceBook extends Book {
 
     public ReferenceBook(int id, String loc, String title, boolean isAvailable, boolean isLoanable, int numOfPages, String coverType){

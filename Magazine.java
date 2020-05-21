@@ -1,5 +1,3 @@
-package lab;
-
 public class Magazine extends Periodicle {
     private String mainTopic;
 

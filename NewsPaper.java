@@ -1,5 +1,3 @@
-package lab;
-
 public class NewsPaper extends Periodicle {
     private String originCity;
 

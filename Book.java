@@ -1,5 +1,3 @@
-package lab;
-
 public class Book extends LibraryItem {
     private String coverType;
 

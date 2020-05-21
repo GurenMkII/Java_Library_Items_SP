@@ -1,5 +1,3 @@
-package lab;
-
 public class LibraryItem {
     private int id, numOfPages;
     private String loc, title;

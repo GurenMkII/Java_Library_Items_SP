@@ -1,5 +1,3 @@
-package lab;
-
 public class GeneralBook extends Book {
     private String genre;
 
