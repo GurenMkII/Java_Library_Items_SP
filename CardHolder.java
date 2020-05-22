@@ -27,10 +27,18 @@ public class CardHolder {
         return this.cardId;
     }
 
-
-    public void previewItem(CardHolder person, LibraryItem book){
-        System.out.println(this.getFirstName()+" checking out - "+book.getTitle()); //??? stuck here...
+    // VSCode's "fix" helped with casts to get it working with Generics...
+    public <E> void itemCheckOut(E book) {
+        if(((LibraryItem) book).getIsAvailable() && ((LibraryItem) book).isLoanable()) {
+            ((LibraryItem) book).setIsAvailable(false);
+            System.out.println("\n"+this.getFirstName()+" "+this.getLastName()+" ("+this.cardId+")"+" is checking out - "+ ((LibraryItem) book)
+                    .getTitle() + " (id: " + ((LibraryItem) book).getId() + ").\n");
+        } else System.out.println("\nUnfortunately this item is not available or cannot be checked out.\n");
     }
-
+    
+    public void itemReturn(LibraryItem book){
+            book.setIsAvailable(true);
+            System.out.println("\n"+this.getFirstName()+" "+this.getLastName()+" ("+this.cardId+")"+" is returning - "+book.getTitle()+" (id: "+book.getId()+").\n");
+    }
     
 }

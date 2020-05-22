@@ -1,16 +1,19 @@
-public class LibraryItem {
+public class LibraryItem implements Loanable, Reserveable {
     private int id, numOfPages;
     private String loc, title;
-    private boolean isLoanable, isAvailable;
+    private boolean isAvailable;
+    private Author authorName;
+    private PublishingCompany pubName;
 
 
-    public LibraryItem(int id, String loc, String title, boolean isAvailable, boolean isLoanable, int numOfPages){
+    public LibraryItem(int id, String loc, String title, boolean isAvailable, int numOfPages, Author authorName, PublishingCompany pubName){
         this.id = id;
         this.loc = loc;
         this.title = title;
         this.isAvailable = isAvailable;
-        this.isLoanable = isLoanable;
         this.numOfPages = numOfPages;
+        this.authorName = authorName;
+        this.pubName = pubName;
     }
 
     public void setId(int id){
@@ -25,12 +28,16 @@ public class LibraryItem {
     public void setTitle(String title){
         this.title = title;
     }
-    public void setIsLoanable(boolean isLoanable){
-        this.isLoanable = isLoanable;
-    }
     public void setIsAvailable(boolean isAvailable){
         this.isAvailable = isAvailable;
     }
+    public void setAuthorName(Author authorName){
+        this.authorName = authorName;
+    }
+    public void setPubName(PublishingCompany pubName){
+        this.pubName = pubName;
+    }
+
 
     public int getId(){
         return id;
@@ -44,17 +51,41 @@ public class LibraryItem {
     public String getTitle(){
         return title;
     }
-    public boolean getIsLoanable(){
-        return isLoanable;
-    }
     public boolean getIsAvailable(){
         return isAvailable;
+    }
+    public Author getAuthorName(){
+        return authorName;
+    }
+    public PublishingCompany getPubName(){
+        return pubName;
     }
 
     @Override
     public String toString(){
-        return this.getTitle()+" - Located at: "+this.getLoc();
+        String avail;
+        if(this.getIsAvailable()){
+            avail = " This item is available now.";
+        } else avail = " This item is not available at this time.";
+  
+        return this.getTitle()+" - Located at: "+this.getLoc()+";"+avail;
     }
+
+    @Override
+    public boolean isLoanable(){
+        return true;
+    }
+    @Override 
+    public int getLoanDuration(){
+        return 7;
+    }
+
+    @Override
+    public boolean isReserveable(){
+        return true;
+    }
+    
+
 
     
 }

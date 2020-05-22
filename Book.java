@@ -1,8 +1,8 @@
 public class Book extends LibraryItem {
     private String coverType;
 
-    public Book(int id, String loc, String title, boolean isAvailable, boolean isLoanable, int numOfPages, String coverType){
-        super(id, loc, title, isAvailable, isLoanable, numOfPages);
+    public Book(int id, String loc, String title, boolean isAvailable, int numOfPages, String coverType, Author authorName, PublishingCompany pubName){
+        super(id, loc, title, isAvailable, numOfPages, authorName, pubName);
     }
         
         public String getCoverType(){

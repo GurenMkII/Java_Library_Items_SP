@@ -2,8 +2,8 @@ public class Periodicle extends LibraryItem {
     private int issueNum;
 
 
-    public Periodicle(int id, String loc, String title, boolean isAvailable, boolean isLoanable, int numOfPages, int issueNum){
-        super(id, loc, title, isAvailable, isLoanable, numOfPages);
+    public Periodicle(int id, String loc, String title, boolean isAvailable, int numOfPages, int issueNum, Author authorName, PublishingCompany pubName){
+        super(id, loc, title, isAvailable, numOfPages, authorName, pubName);
     }
 
     public void setIssueNum(int issueNum){
