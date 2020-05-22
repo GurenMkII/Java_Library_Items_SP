@@ -1,0 +1,3 @@
+public enum LibraryItemTypes {
+    GENERALBOOK, REFERENCEBOOK, MAGAZINE, NEWSPAPER;
+}

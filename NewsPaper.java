@@ -5,6 +5,9 @@ public class NewsPaper extends Periodicle {
         super(id, loc, title, isAvailable, numOfPages, issueNum, authorName, pubName);
     }
 
+    public NewsPaper(){
+    }
+
     public void setOriginCity(String originCity){
         this.originCity = originCity;
     }

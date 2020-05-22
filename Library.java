@@ -22,7 +22,7 @@ public class Library {
         System.out.println("\n"+book2.toString()+"\n");
         
         person1.itemReturn(book1);
-
+        
         System.out.println("\n"+book1.toString()+"\n");
         
         Loanable book3 = new GeneralBook(2, "B.100.5", "Star Saga", true, 843, "HardCover", "Sci-Fi", author1, pub1);
@@ -32,12 +32,22 @@ public class Library {
         System.out.println("Overdue fees are $"+book3.getOverdueFee()+" per week.");
         
         person2.itemCheckOut(book3);
-
-
-
-
-
-
+        
+        
+        LibraryItem book4 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.REFERENCEBOOK);
+        LibraryItem book5 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.REFERENCEBOOK);
+        LibraryItem per1 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.MAGAZINE);
+        LibraryItem per2 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.MAGAZINE);
+        LibraryItem per3 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.MAGAZINE);
+        LibraryItem per4 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.NEWSPAPER);
+        LibraryItem per5 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.NEWSPAPER);
+        LibraryItem per6 = LibraryItemFactory.createLibraryItem(LibraryItemTypes.NEWSPAPER);
+        
+        System.out.println("\n"+book4.toString()+"\n");
+        System.out.println("\n"+per2.toString()+"\n");
+        System.out.println("\n"+per5.toString()+"\n");
+        
+        
 
 
     }

@@ -5,6 +5,9 @@ public class Magazine extends Periodicle {
         super(id, loc, title, isAvailable, numOfPages, issueNum, authorName, pubName);
     }
 
+    public Magazine(){
+    }
+
     public void setMainTopic(String mainTopic){
         this.mainTopic = mainTopic;
     }

@@ -6,6 +6,9 @@ public class Periodicle extends LibraryItem {
         super(id, loc, title, isAvailable, numOfPages, authorName, pubName);
     }
 
+    public Periodicle(){
+    }
+
     public void setIssueNum(int issueNum){
         this.issueNum = issueNum;
     }

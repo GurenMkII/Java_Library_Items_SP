@@ -16,6 +16,9 @@ public class LibraryItem implements Loanable, Reserveable {
         this.pubName = pubName;
     }
 
+    public LibraryItem(){
+    }
+
     public void setId(int id){
         this.id = id;
     }
